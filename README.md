@@ -80,3 +80,20 @@ Open [http://localhost:3000](http://localhost:3000).
 ├── models/              # Mongoose models (User, Chat)
 └── types/               # TypeScript types
 ```
+
+## Docker
+
+### Build and run with Docker Compose
+
+```bash
+docker-compose up --build
+```
+
+App sẽ chạy tại [http://localhost:3000](http://localhost:3000).
+
+### Build image thủ công
+
+```bash
+docker build -t ai-chat-saas .
+docker run -p 3000:3000 --env-file .env.local ai-chat-saas
+```
